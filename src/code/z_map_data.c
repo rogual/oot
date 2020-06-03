@@ -17,9 +17,8 @@ static u8 floorTexIndexOffset[160] = {
     0x00, 0x00, 0x00, 0x00
 };
 
-static u8 bossFloor[16] = {
-    0x00, 0x07, 0x00, 0x07, 0x00, 0x06, 0x00, 0x07, 0x00, 0x07, 0x00, 0x04,
-    0x00, 0x05, 0x00, 0x07
+static s16 bossFloor[8] = {
+    7, 7, 6, 7, 7, 4, 5, 7
 };
 
 static u8 roomPalette[640] = {
@@ -721,7 +720,7 @@ static s16 skullFloorIconY[10] = {
 
 MapData gMapDataTable = {
     (void*)floorTexIndexOffset,
-    (void*)bossFloor,
+           bossFloor,
     (void*)roomPalette,
     (void*)maxPaletteCount,
     (void*)paletteRoom,
@@ -741,11 +740,11 @@ MapData gMapDataTable = {
     (void*)owEntranceIconPosX,
     (void*)owEntranceIconPosY,
     (void*)owEntranceFlag,
-    floorCoordY,
+           floorCoordY,
     (void*)switchEntryCount,
     (void*)switchFromRoom,
     (void*)switchFromFloor,
     (void*)switchToRoom,
-    floorNames,
-    skullFloorIconY,
+           floorNames,
+           skullFloorIconY,
 };
